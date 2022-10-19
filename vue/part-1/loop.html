@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+
+        }
+        #app{
+            width: 80% ;
+            margin: 0% auto;
+        }
+    </style>
+</head>
+  <body>
+    <div id="app">
+      <!-- <li v-for="todo in todos">{{ todo }}</li> -->
+      <h3 v-for="data in object">{{ data.text }} -- {{ data.popularity }} </h3>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          object: [
+            { text: "How to do lists in Vue", popularity:'Few' },
+            { text: "How to do lists in React" ,  popularity:'More'},
+            { text: "How to do lists in Angular",  popularity:'Most' },
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>

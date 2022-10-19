@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+
+        }
+        #app{
+            width: 80% ;
+            margin: 0% auto;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0px;
+
+        }
+        nav li{
+            list-style: none;
+            padding: 6px 10px;
+            background-color: cornflowerblue;
+            margin: 0px 5px;
+        }
+        nav li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        .nav-logo h1{
+            font-size: 24px;
+            line-height: 30px;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+  <body>
+    <div id="app">
+        
+        <nav>
+            <div class="nav-logo">
+                <h1>Hello Vue Js</h1>
+            </div>
+            <ul>
+                <li><a target="_blank">Programing Hero</a></li>
+                <li><a target="_blank">Web Devs</a></li>
+                <li><a target="_blank">W3 Coders</a></li>
+                <li><a target="_blank">Home Coders</a></li>
+                <li><a target="_blank">Ptec Coders</a></li>
+                <li><a target="_blank">Ctec Coders</a></li>
+            </ul>
+        </nav>
+        <div>
+            <label for="name">My Name Is : {{ name }} </label>
+            <br>
+            <input type="text" v-model="name">
+            <br> <br>
+            <input type="checkbox" v-model="status">
+            <small>Status Is : {{ status }}</small>
+
+            <br>
+            <hr>
+            <input type="checkbox" value="Rahad" v-model="names"> Rahad
+            <input type="checkbox" value="Shovon" v-model="names"> Shovon
+            <input type="checkbox" value="Tuhin" v-model="names"> Tuhin
+            <input type="checkbox" value="Roky" v-model="names"> Roky
+            <br>
+            <p>A list of names: {{ names.join(',') }}</p>
+            <hr>
+            <input type="radio" value="good" v-model="feellins">Good
+            <input type="radio" value="better" v-model="feellins">Better
+            <input type="radio" value="best" v-model="feellins">Best
+
+            <p>Fellings : {{ feellins }}</p>
+        </div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+            name:'Hello Vue Js',
+            status: true,
+            names:[],
+            feellins:'good'
+        }
+      })
+    </script>
+  </body>
+</html>

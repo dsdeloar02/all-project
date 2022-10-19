@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+    <div class="app-2">
+        <span v-if="seen" > {{ message }} </span>
+        <span v-else-if="seentow" > {{ messagetwo }} </span>
+        <span v-else="seenthree" > {{ messagethree }} </span>
+    </div>
+      
+      <script>
+        var app2 = new Vue({
+            el:'.app-2',
+            data:{
+                seen: false,
+                seentow:false,
+                // seenthree:true,
+                message: 'Now you can see me 4',
+                messagetwo: 'Message number 2 ',
+                messagethree: ' Three number '
+            }
+        })
+        
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+            seen: false
+            }
+        })
+      </script>
+</body>
+</html>

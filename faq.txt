@@ -1,0 +1,6 @@
+1 => Local storage ase kina check korte hobe
+2 => Then Parse korte hobe 
+3 => Jodi Thake Ager gula dekhte hbe and notun ta set korte hobe ('name', json.stringify([...Agerta, notun ]))
+	--->> Jodi thake *is exist{
+
+4 => Jodi Na the SetItem korte hobe ('name', json.stringify([info]))

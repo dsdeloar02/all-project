@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+
+        }
+        #app{
+            width: 80% ;
+            margin: 0% auto;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0px;
+
+        }
+        nav li{
+            list-style: none;
+            padding: 10px 20px;
+            background-color: cornflowerblue;
+            margin: 10px;
+        }
+        nav li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .active{
+            background-color: #462c2f;
+        }
+        .error{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+  <body>
+    <div id="app">
+        <h1>{{ name }}</h1>
+        <nav>
+            <ul>
+                <li><a :href="url" target="_blank">Programing Hero</a></li>
+                <li><a :href="url" target="_blank">Web Devs</a></li>
+                <li :class="{ active:is_active }" ><a :href="url" target="_blank">W3 Coders</a></li>
+                <li :class="{ error:has_error }"><a :href="url" target="_blank">Home Coders</a></li>
+                <li><a :href="url" target="_blank">Ptec Coders</a></li>
+                <li><a :href="url" target="_blank">Ctec Coders</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+            name:'Hello Vue Js ',
+            url:'http://w3coders.net/user/single-course/11/laravel9+vue3-multivendor-ecommerce',
+            is_active:true,
+            has_error:true
+        },
+      })
+    </script>
+  </body>
+</html>
